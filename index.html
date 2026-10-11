@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marlo's Coffee | Good Coffee Brings Better Days</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Dancing+Script:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="hb">
+ <a href="#hero" class="logo">☕ Marlo's</a>
+ <nav><a href="#hero">Home</a><a href="#menu">Menu</a><a href="#cerita">Cerita</a><a href="#ulasan">Ulasan</a><a href="#reservasi">Reservasi</a></nav>
+ <button class="cart" onclick="openCart()">🛒 Pesanan <b id="cc">0</b></button>
+</div></header>
+
+<section class="hero" id="hero"><div class="hw">
+ <div class="hc">
+  <span class="pill">PREMIUM COFFEE & MORE</span>
+  <h1>Good Coffee Brings<span class="scr" id="rot">Better Days</span></h1>
+  <p>Di Marlo's kami tidak hanya menyajikan kopi — kami menyajikan momen. Seduhan segar, suasana nyaman, dan tempat untuk jadi dirimu sendiri.</p>
+  <a href="#menu" class="btn">Lihat Menu →</a>
+  <div class="fts"><div><span>🫘</span>Fresh Beans</div><div><span>☕</span>Premium Taste</div><div><span>🤍</span>Cozy Space</div><div><span>🌿</span>Eco Friendly</div></div>
+ </div>
+ <div class="hi"><div class="blob"></div><img id="heroImg" alt="Latte art"></div>
+</div></section>
+<div class="strip"><div class="tr" id="strip"></div></div>
+
+<main id="menu">
+ <div class="sec hd rv"><span class="eb">POPULAR CHOICES</span><h2>Our Signature Drinks</h2></div>
+ <div class="tabs" id="tabs"></div>
+ <div class="sec">
+  <div class="feat rv" id="feat">
+   <div class="fpic"><div class="blob"></div><img id="fImg" alt=""></div>
+   <div class="fx"><span class="eb">PILIHAN KAMI</span><h3 id="fn"></h3><div class="stars">★★★★★</div><p id="fd"></p><div class="fp" id="fp"></div>
+    <div class="fa"><div class="st"><button onclick="fq(-1)">−</button><b id="fqn">1</b><button onclick="fq(1)">+</button></div><button class="ord" onclick="addF()">Order Now →</button></div></div>
+   <button class="nv l" onclick="nx(-1)">‹</button><button class="nv r" onclick="nx(1)">›</button>
+  </div>
+  <div class="pg" id="pg"></div>
+ </div>
+</main>
+
+<section class="sec" id="cerita">
+ <div class="story rv"><div class="sc"><span class="eb">OUR STORY</span><h2>More Than Coffee, It's a Lifestyle.</h2><p>Marlo's lahir dari ide sederhana — kopi enak bisa membuat momen sehari-hari terasa istimewa. Kami menghadirkan biji terbaik, diracik dengan hati, di ruang yang terasa seperti rumah.</p><a class="btn" href="#menu">Lihat Menu →</a></div>
+  <div class="sp"><div class="blob"></div><img id="storyImg" alt="Cold brew"></div></div>
+ <div class="pc rv"><div class="pcd"><span>🤲</span>Hand Roasted</div><div class="pcd c"><span>☕</span>Direct Trade</div><div class="pcd"><span>🫘</span>Organic Taste</div></div>
+</section>
+
+<section class="sec" id="ulasan">
+ <div class="hd rv"><span class="eb">TESTIMONIAL</span><h2>Kata Mereka</h2></div>
+ <div class="rm"><div class="rt" id="rt"></div></div>
+ <div class="rf rv"><h4>Tulis saran atau ulasanmu</h4><input id="rn" placeholder="Nama kamu"><textarea id="rs" rows="3" placeholder="Saran atau ulasanmu untuk kami..."></textarea><button class="ord c" onclick="postR()">Kirim Saran</button></div>
+</section>
+
+<section class="res" id="reservasi">
+ <svg class="wave" viewBox="0 0 2400 60" preserveAspectRatio="none"><path d="M0,30C200,0 400,60 600,30C800,0 1000,60 1200,30C1400,0 1600,60 1800,30C2000,0 2200,60 2400,30V0H0Z" fill="#e6e2d9"/></svg>
+ <div class="rw2">
+  <div class="rv"><span class="eb l">RESERVE A TABLE</span><h2>Book Your Cozy Spot</h2><p>Makanan enak, kopi mantap, dan suasana yang lebih hangat.</p>
+   <input id="rvn" placeholder="Nama"><input id="rve" placeholder="Email"><textarea id="rvm" rows="3" placeholder="Pesan (tanggal, jam, jumlah orang)"></textarea>
+   <button class="ord c" style="width:100%" onclick="reserve()">Kirim</button></div>
+  <div class="slw rv"><div id="slide"></div><span class="cap">● Suasana Marlo's</span></div>
+ </div>
+</section>
+
+<footer><div class="fg">
+ <div><h2>Marlo's</h2><p>Kopi sangrai tangan, bahan pilihan, dan suasana hangat untuk jeda terbaikmu setiap hari.</p>
+  <div class="em"><input id="mail" placeholder="Email untuk info menu baru"><button onclick="sub()">Subscribe</button></div></div>
+ <div><h5>Halaman</h5><a href="#hero">Home</a><a href="#menu">Menu</a><a href="#cerita">Cerita</a><a href="#ulasan">Ulasan</a></div>
+ <div><h5>Tautan</h5><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a></div>
+ <div><h5>Kontak</h5><p>📍 Jl. Braga No. 21, Bandung</p><p>📞 0812-3456-7890</p><p>🕙 Setiap hari 08.00 – 23.00</p></div>
+</div><div class="cp">© 2026 Marlo's Coffee. Semua hak dilindungi.</div></footer>
+
+<div class="cbar" id="cbar"><span><b id="cbn">0</b> item · <b id="cbt">Rp0</b></span><button onclick="openCart()">Lihat Pesanan →</button></div>
+<div class="ov" id="ov" onclick="closeAll()"></div>
+<div class="dr" id="dr"><div class="dh"><h3>Pesananmu</h3><button class="x" onclick="closeAll()">×</button></div><div class="db" id="cl"></div>
+ <div class="df"><div class="tot"><span>Total</span><span id="ct">Rp0</span></div><button class="ord c" style="width:100%;padding:14px" onclick="openCo()">Lanjut Pembayaran</button></div></div>
+
+<div class="md" id="md">
+ <div id="s1"><h3>Pembayaran</h3>
+  <label>Nama pemesan</label><input id="nm" placeholder="Nama kamu">
+  <label>Jenis pesanan</label><select id="tp"><option>Dine-in</option><option>Take-away</option></select>
+  <label>Tambahan / catatan (opsional)</label><textarea id="nt" rows="2" placeholder="Ketik di sini, contoh: saus extra, es batu sedikit"></textarea>
+  <div class="chips" id="chips"></div>
+  <div id="promoBox" class="hide"><label>Kode promo</label><div class="pr2"><input id="pc" placeholder="Masukkan kode promo"><button class="ord" onclick="applyPromo()">Pakai</button></div></div>
+  <label>Metode pembayaran</label>
+  <div class="pay"><div id="p-cash" class="on" onclick="setPay('cash')">💵 Tunai</div><div id="p-qris" onclick="setPay('qris')">📱 Non-Tunai (QRIS)</div></div>
+  <div class="sum" id="sum"></div>
+  <div id="cashBox"><label>Uang diterima (Rp)</label><input id="cashIn" type="number" placeholder="contoh: 100000" oninput="calcChg()"><div class="sum" style="margin-top:8px">Kembalian <b id="chg">Rp0</b></div></div>
+  <div id="qrisBox" class="qris hide"><div class="qb"><h5>QRIS</h5><div id="qr"></div></div><p>Scan dengan e-wallet atau m-banking.<br>Bayar tepat <b id="qa"></b> · berlaku <b id="cd">05:00</b></p></div>
+  <button class="ord c" style="width:100%;padding:14px;margin-top:16px" id="pb" onclick="confirmPay()">Konfirmasi Pesanan</button>
+  <button class="ord g" style="width:100%;margin-top:8px" onclick="closeAll()">Batal</button></div>
+ <div id="s2" class="hide"><h3 style="text-align:center">Pesanan Diterima 🎉</h3><div class="stk" id="stk"></div>
+  <button class="ord c" style="width:100%;padding:13px;margin-top:14px" onclick="closeAll()">Selesai</button></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
